@@ -1,6 +1,7 @@
 const TelegramBot = require(`node-telegram-bot-api`)
-const dadosBot = require('./bot-info.json')
-const bot = new TelegramBot(dadosBot.Token, { polling:true })
+//const dadosBot = require('./bot-info.json')
+
+const bot = new TelegramBot(process.env.api_key, { polling:true })
 
 
 bot.on('message',(msg)=>{
