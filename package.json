@@ -1,0 +1,20 @@
+{
+  "name": "stronger",
+  "version": "1.0.0",
+  "description": "Telegram bot para rolagem de dados",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bot",
+    "telegram",
+    "dado",
+    "rpg"
+  ],
+  "author": "Nikolas Brandão",
+  "license": "ISC",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.28.0"
+  }
+}
