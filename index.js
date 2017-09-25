@@ -40,6 +40,17 @@ var sendDices = (msg, match)=>{
         .catch( logErrorEcho( 'Error:' ) );
 };
 
+var sendHelp = (msg, match)=>{
+    let comandos = "Stranger Dice é um bot que rola dados de rpg para sua campanha"
+                    + "\n" + "Para rolar dados siga o padrão:" + "\n"
+                    + "/ + quantos dados você quer rolar + d + tipo do dado " + "\n"
+                    + "Ex: "+ "\n"+ "/3d6" + "\n" + "/5d10" + "\n" + "/2d20";
+
+    bot.sendMessage( msg.chat.id, comandos)
+        .then()
+        .catch( logErrorEcho( 'Error:' ) );
+};
+
 bot.onText( /\/echo (.*)/, sendEcho );
 
 // Expressão regular, comando deve começar com "/"
@@ -47,3 +58,5 @@ bot.onText( /\/echo (.*)/, sendEcho );
 // um caracter "d" minusculo ou maiusculo, e finalizando
 // com um numero de duas casas decimais.
 bot.onText( /\/\b\d{1,2}[dD]\d{1,2}/, sendDices );
+
+bot.onText(/\/help/, sendHelp );
