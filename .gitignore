@@ -58,4 +58,4 @@ typings/
 .env
 
 #Arquivos de configuração do bot
-bot-info.json
+#bot-info.json
